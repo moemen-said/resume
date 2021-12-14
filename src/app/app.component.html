@@ -1,0 +1,23 @@
+<div class="viewDiv">
+
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+
+    <div class="sideBarDiv">
+      <app-side-nav></app-side-nav>
+    </div>
+
+    <div class="mainContentDiv">
+      <router-outlet></router-outlet>
+    </div>
+
+  </main>
+
+</div>
+
+<div class="loadingDiv" #loadingDiv>
+  <app-loading></app-loading>
+</div>

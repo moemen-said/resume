@@ -1,0 +1,10 @@
+body {
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'logoFont';
+    src:url(/assets/fonts/Bungee/Bungee-Regular.woff2) format('woff2'),
+        url(/assets/fonts/Bungee/Bungee-Regular.woff) format('woff'),
+        url(/assets/fonts/Bungee/Bungee-Regular.ttf) format('truetype');
+}

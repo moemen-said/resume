@@ -1,0 +1,263 @@
+.containerDiv {
+    background: radial-gradient(circle, #080808 4%, #0038A8);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        max-width: 500px;
+    }
+}
+
+@media (max-width:768px) {
+    .containerDiv{
+    background: radial-gradient(circle, #080808 50%, #0038A8);
+
+    }
+    svg{
+        width: 300px;
+    }
+    
+}
+
+
+
+
+
+/*#region SVG Style and Animation*/
+.top {
+    opacity: 0;
+    animation: fadeTop 5.1s ease-out .5s forwards;
+}
+
+.center {
+    opacity: 0;
+    transform-origin: center;
+    transform: rotateY(90deg);
+    animation: fadeCenter .5s linear forwards;
+}
+
+.down {
+    opacity: 0;
+    animation: fadeBottom 5.1s ease-out .5s forwards;
+}
+
+.n1 {
+    stroke-dasharray: 834 836;
+    stroke-dashoffset: 835;
+
+    &_1 {
+        animation: mDraw 5s ease-out 1.5s forwards;
+    }
+
+    &_2 {
+        animation: drawWithFadeOut 5s ease-out 1.55s forwards;
+    }
+
+    &_3 {
+        animation: drawWithFadeOut 5s ease-out 1.6s forwards;
+    }
+
+    &_4 {
+        animation: drawWithFadeOut 5s ease-out 1.65s forwards;
+    }
+
+    &_5 {
+        animation: drawWithFadeOut 5s ease-out 1.7s forwards;
+    }
+
+    &_6 {
+        animation: drawWithFadeOut 5s ease-out 1.75s forwards;
+    }
+}
+
+
+.n2 {
+    stroke-dasharray: 834 836;
+    stroke-dashoffset: 835;
+
+    &_1 {
+        animation: sDraw 5s ease-out 1.7s forwards;
+    }
+
+    &_2 {
+        animation: drawWithFadeOut 5s ease-out 1.75s forwards;
+    }
+
+    &_3 {
+        animation: drawWithFadeOut 5s ease-out 1.8s forwards;
+    }
+
+    &_4 {
+        animation: drawWithFadeOut 5s ease-out 1.85s forwards;
+    }
+}
+
+
+@keyframes fadeTop {
+    0% {
+        opacity: 0;
+        transform: translateY(40px)
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+
+    95% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(17px)
+    }
+}
+
+@keyframes fadeCenter {
+    0% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1
+    }
+}
+
+@keyframes fadeBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px)
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+
+    95% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-17px)
+    }
+}
+
+@keyframes mDraw {
+    20% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    55% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    70% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    80% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: scale(2.3)translate(12px, -84px);
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: scale(2.3)translate(12px, -84px);
+
+    }
+}
+
+@keyframes sDraw {
+    20% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    55% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    66% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    75% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: scale(2.2)translate(32px, -173px);
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: scale(2.2)translate(32px, -173px);
+
+    }
+}
+
+@keyframes drawWithFadeOut {
+    20% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    55% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+        transform: translateX(10px);
+    }
+}
+
+/*#endregion*/

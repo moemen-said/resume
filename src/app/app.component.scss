@@ -1,0 +1,14 @@
+.viewDiv{
+    width: 100vw;
+    height: 100vh;
+    background: #080808;
+
+    header{
+        width: 100%;
+    }
+}
+
+.loadingDiv{
+    transition: all .5s ease-in-out;
+    opacity: 1;
+}
