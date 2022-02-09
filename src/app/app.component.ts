@@ -1,26 +1,37 @@
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+import { appAnimations } from './app-animation';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations:[appAnimations]
 })
 export class AppComponent {
-  title = 'Moemen Resume';
 
+  title = 'Moemen Resume';
+  loading:boolean = true;
   @ViewChild('loadingDiv') loadingDivElement: ElementRef;
 
   constructor(private render: Renderer2) { }
 
   ngOnInit() {
-    this.fadeOutIntro();
+    // this.fadeOutIntro();
   }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet &&
+        outlet.activatedRouteData &&
+        outlet.activatedRouteData['animationState'];
+}
 
   fadeOutIntro() {
     setTimeout(() => {
       this.render.setStyle(this.loadingDivElement.nativeElement, "opacity", "0")
       setTimeout(() => {
-        this.render.setStyle(this.loadingDivElement.nativeElement, "display", "none")
+        this.loading=false
       }, 500)
     }, 6000);
   }

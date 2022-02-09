@@ -1,0 +1,51 @@
+//colors
+$primary-color: #0c2b36;
+$secondary-color: #12ebd8;
+$black-color: #080808;
+$white-color:#eee;
+$shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
+  0 1px 18px 0 rgb(0 0 0 / 12%);
+
+//mixins
+@mixin centeredFlexDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fullscreenSize {
+    width: 100vw;
+    height: 100vh;
+}
+
+@mixin btnFormatter($backColor, $textColor, $backState:false) {
+    all: unset;
+    border-radius: 10px;
+    color: $textColor;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 3px 5px #888;
+    }
+
+    &:active {
+        background-color: color.adjust($backColor, $lightness: -10%);
+        color: #fff;
+    }
+
+
+    @if $backState==false {
+        background-color: $backColor;
+        border: none;
+    }
+
+    @else {
+        background-color: transparent;
+        border: 1px solid $backColor
+    }
+
+
+}

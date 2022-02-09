@@ -1,14 +1,48 @@
-.viewDiv{
-    width: 100vw;
-    height: 100vh;
-    background: #080808;
+@import "/src/assets/styles/mixins.scss";
 
-    header{
-        width: 100%;
+.viewDiv {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #0c2b36,
+    #015665,
+    #008591,
+    #00b7b8,
+    #12ebd8
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mainRow {
+    justify-content: center;
+    .contentDiv {
+      max-width: unset;
     }
+  }
 }
 
-.loadingDiv{
-    transition: all .5s ease-in-out;
-    opacity: 1;
+.loadingDiv {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .viewDiv {
+    height: auto;
+    padding-top: 50px;
+  }
+
+  .mainRow {
+    justify-content: unset;
+    .contentDiv {
+      max-width: 700px !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .viewDiv {
+    padding: 0px;
+  }
 }

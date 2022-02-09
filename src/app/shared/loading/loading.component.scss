@@ -1,5 +1,9 @@
+@import "/src/assets/styles/mixins.scss";
+
 .containerDiv {
-    background: radial-gradient(circle, #080808 4%, #0038A8);
+    background: radial-gradient(circle, $secondary-color 4%, $primary-color);
+    background-size: 100%;
+    background-position: center;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -7,27 +11,55 @@
     height: 100vh;
     z-index: 5;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: backgroundAnimation 1s ease-in-out 5.4s forwards;
 
     svg {
         max-width: 500px;
     }
+
+    p{
+        color: #080808;
+        font-family: Bungee;
+        font-size: 40px;
+        text-align: center;
+        margin: 20px auto;
+        animation: loadingFading 3s ease-in-out 6.5S infinite;
+        opacity: 0;
+    }
 }
 
 @media (max-width:768px) {
-    .containerDiv{
-    background: radial-gradient(circle, #080808 50%, #0038A8);
-
-    }
-    svg{
+    svg {
         width: 300px;
     }
-    
+
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 500%;
+    }
 }
 
 
-
+@keyframes loadingFading {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 
 
 /*#region SVG Style and Animation*/
@@ -182,12 +214,14 @@
     }
 
     80% {
+        stroke: #080808;
         stroke-dashoffset: 0;
         opacity: 1;
         transform: scale(2.3)translate(12px, -84px);
     }
 
     100% {
+        stroke: #333;
         stroke-dashoffset: 0;
         opacity: 1;
         transform: scale(2.3)translate(12px, -84px);
@@ -221,12 +255,14 @@
     }
 
     75% {
+        stroke: #080808;
         stroke-dashoffset: 0;
         opacity: 1;
         transform: scale(2.2)translate(32px, -173px);
     }
 
     100% {
+        stroke: #333;
         stroke-dashoffset: 0;
         opacity: 1;
         transform: scale(2.2)translate(32px, -173px);

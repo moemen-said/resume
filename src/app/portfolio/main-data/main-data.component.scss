@@ -1,0 +1,89 @@
+@import "/src/assets/styles/mixins.scss";
+
+.mainDiv {
+  background-color: #fff;
+  box-shadow: -15px -15px 0px rgba(#12ebd8, $alpha: 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+
+  &-imgDiv {
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &::before,&::after{
+      content: "";
+      position: absolute;
+      bottom: -66%;
+      width: 120%;
+      height: 70%;
+      background-color: #fff;
+    }
+    &::before {   
+      left: -20%;
+      transform: rotate(12deg);
+    }
+    &::after {
+      right: -20%;
+      transform: rotate(-12deg);
+    }
+  }
+
+  &-dataDiv {
+    font-family: comfortaa;
+    text-align: center;
+    &_name {
+      color: #555;
+    }
+    &_jobTitle {
+      color: #888;
+    }
+    &_linksDiv {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: #555;
+        margin: 10px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          fill: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  button {
+    all: unset;
+    font-family: comfortaa;
+    display: block;
+    padding: 10px;
+    margin: 50px auto 20px auto;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+@media (max-width:576px) {
+  .mainDiv{
+    box-shadow: none;
+  }
+}

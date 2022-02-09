@@ -1,0 +1,104 @@
+@import "/src/assets/styles/mixins.scss";
+
+.fixingDiv {
+  display: none;
+}
+
+.navigationDiv {
+  width: 70px;
+  background: #fff;
+  box-shadow: $shadow;
+  border-radius: 10px;
+  margin: auto;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #888;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    svg {
+      fill: #888;
+      width: 25px;
+      height: 25px;
+      transition: inherit;
+      margin-bottom: 5px;
+    }
+
+    &.logo svg {
+      width: 50px;
+      height: 50px;
+      fill: $primary-color;
+    }
+
+    p {
+      text-align: center;
+      margin: 0;
+      font-family: comfortaa;
+      font-size: 12px;
+      font-weight: 600;
+      color: #888;
+      transition: inherit;
+      line-height: 25px;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &:hover svg.icon {
+      fill: $primary-color;
+    }
+    &:hover p {
+      color: $primary-color;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .navigationDiv {
+    position: sticky;
+    top: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .fixingDiv {
+    display: block;
+    height: 80px;
+  }
+
+  .navigationDiv {
+    background: $primary-color;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-radius: 0;
+
+    &-item {
+      padding: 5px 0 0 0;
+      border-bottom: none;
+      p{
+        color: #eee;
+      }
+      svg{
+        fill: #eee;
+      }
+
+      &:hover svg.icon {
+        fill: #fff;
+      }
+      &:hover p {
+        color: #fff;
+      }
+    }
+  }
+}

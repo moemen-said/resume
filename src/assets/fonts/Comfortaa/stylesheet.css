@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Bungee';
+    src: url('Comfortaa.eot');
+    src: url('Comfortaa.eot?#iefix') format('embedded-opentype'),
+        url('Comfortaa.woff2') format('woff2'),
+        url('Comfortaa.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
