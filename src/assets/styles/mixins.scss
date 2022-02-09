@@ -1,51 +1,34 @@
 //colors
 $primary-color: #0c2b36;
-$secondary-color: #12ebd8;
+$secondary-color: #008591;
 $black-color: #080808;
-$white-color:#eee;
+$white-color: #eee;
 $shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
   0 1px 18px 0 rgb(0 0 0 / 12%);
 
 //mixins
 @mixin centeredFlexDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin fullscreenSize {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
-@mixin btnFormatter($backColor, $textColor, $backState:false) {
-    all: unset;
-    border-radius: 10px;
-    color: $textColor;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all .15s ease-in-out;
+@mixin outerDiv {
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 10px 0 10px -40px;
+  height: calc(100% - 20px);
+  box-sizing: border-box;
+  box-shadow: $shadow;
 
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0px 3px 5px #888;
-    }
-
-    &:active {
-        background-color: color.adjust($backColor, $lightness: -10%);
-        color: #fff;
-    }
-
-
-    @if $backState==false {
-        background-color: $backColor;
-        border: none;
-    }
-
-    @else {
-        background-color: transparent;
-        border: 1px solid $backColor
-    }
-
-
+  @media (max-width:1200px) {
+    margin: 20px auto;
+    padding: 20px;
+  }
 }

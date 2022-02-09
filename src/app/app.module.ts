@@ -8,10 +8,10 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { MainDataComponent } from './portfolio/main-data/main-data.component';
 import { NavComponent } from './portfolio/nav/nav.component';
-import { AboutComponent } from './portfolio/about/about.component';
-import { ResumeComponent } from './portfolio/resume/resume.component';
-import { ProjectsComponent } from './portfolio/projects/projects.component';
-import { ContactComponent } from './portfolio/contact/contact.component';
+import { AboutComponent } from './portfolio/router-component/about/about.component';
+import { ResumeComponent } from './portfolio/router-component/resume/resume.component';
+import { ProjectsComponent } from './portfolio/router-component/projects/projects.component';
+import { ContactComponent } from './portfolio/router-component/contact/contact.component';
 
 @NgModule({
   declarations: [

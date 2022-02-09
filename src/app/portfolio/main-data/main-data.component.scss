@@ -2,21 +2,22 @@
 
 .mainDiv {
   background-color: #fff;
-  box-shadow: -15px -15px 0px rgba(#12ebd8, $alpha: 0.2);
+  box-shadow: -15px -15px 0px rgba(#12ebd8, $alpha: 0.2), $shadow;
   border-radius: 10px;
   overflow: hidden;
 
   &-imgDiv {
     position: relative;
     overflow: hidden;
-    img {
+      img {
       width: 100%;
-      max-height: 300px;
+      height: 400px;
       object-fit: cover;
       object-position: center;
     }
 
-    &::before,&::after{
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       bottom: -66%;
@@ -24,7 +25,7 @@
       height: 70%;
       background-color: #fff;
     }
-    &::before {   
+    &::before {
       left: -20%;
       transform: rotate(12deg);
     }
@@ -38,7 +39,7 @@
     font-family: comfortaa;
     text-align: center;
     &_name {
-      color: #555;
+      color: $secondary-color;
     }
     &_jobTitle {
       color: #888;
@@ -65,12 +66,14 @@
 }
 
 footer {
+  border-top: 1px solid #eee;
+  margin: 10px 0;
   button {
     all: unset;
     font-family: comfortaa;
     display: block;
-    padding: 10px;
-    margin: 50px auto 20px auto;
+    padding: 15px 0 5px 0;
+    margin: 0px auto;
     font-size: 20px;
     color: #555;
     cursor: pointer;
@@ -82,8 +85,8 @@ footer {
   }
 }
 
-@media (max-width:576px) {
-  .mainDiv{
-    box-shadow: none;
+@media (max-width:1200px) {
+  .mainDiv {
+    box-shadow: $shadow;
   }
 }

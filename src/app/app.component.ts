@@ -18,7 +18,7 @@ export class AppComponent {
   constructor(private render: Renderer2) { }
 
   ngOnInit() {
-    // this.fadeOutIntro();
+    this.fadeOutIntro();
   }
 
   prepareRoute(outlet: RouterOutlet) {
@@ -32,7 +32,7 @@ export class AppComponent {
       this.render.setStyle(this.loadingDivElement.nativeElement, "opacity", "0")
       setTimeout(() => {
         this.loading=false
-      }, 500)
+      }, 700)
     }, 6000);
   }
 }

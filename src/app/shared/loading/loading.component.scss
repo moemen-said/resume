@@ -1,8 +1,15 @@
 @import "/src/assets/styles/mixins.scss";
 
 .containerDiv {
-    background: radial-gradient(circle, $secondary-color 4%, $primary-color);
-    background-size: 100%;
+    background-image: linear-gradient(
+    to right bottom,
+    #0c2b36,
+    #015665,
+    #008591,
+    #00b7b8,
+    #12ebd8
+  );
+    background-size: 200%;
     background-position: center;
     position: absolute;
     top: 0px;
@@ -36,16 +43,6 @@
         width: 300px;
     }
 
-}
-
-@keyframes backgroundAnimation {
-    0% {
-        background-size: 100%;
-    }
-
-    100% {
-        background-size: 500%;
-    }
 }
 
 
