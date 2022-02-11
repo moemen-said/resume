@@ -67,17 +67,17 @@
 
 footer {
   border-top: 1px solid #eee;
-  margin: 10px 0;
-  button {
-    all: unset;
+  padding: 10px 0;
+  a {
+    text-decoration: none;
     font-family: comfortaa;
-    display: block;
-    padding: 15px 0 5px 0;
-    margin: 0px auto;
+    text-align: center;
+    padding: 5px 0;
     font-size: 20px;
     color: #555;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    display: block;
 
     &:hover {
       color: $primary-color;

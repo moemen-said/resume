@@ -1,24 +1,7 @@
 <div class="viewDiv">
 
   <main class="container container-xl">
-    <div class="row mainRow">
-      <div class="col-12 col-sm-2 col-lg-1" style="z-index: 2;">
-        <app-nav></app-nav>
-      </div>
-      <div class="col-12 col-sm-10 col-xl-11 contentDiv">
-        <div class="row">
-
-          <div class="mainDiv col-12 col-xl-5" style="z-index: 1;">
-            <app-main-data></app-main-data>
-          </div>
-
-          <div class="mainContentDiv col-12 col-xl-6" [@appAnimations]="prepareRoute(outlet)" style="z-index: 0;">
-            <router-outlet #outlet="outlet"></router-outlet>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <router-outlet #outlet="outlet"></router-outlet>
   </main>
 
 </div>

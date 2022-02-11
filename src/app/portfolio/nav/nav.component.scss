@@ -90,17 +90,10 @@
       padding: 5px 0 0 0;
       border-bottom: none;
       p {
-        color: #eee;
+        color: #ddd;
       }
       svg {
-        fill: #eee;
-      }
-
-      &:hover svg.icon {
-        fill: #fff;
-      }
-      &:hover p {
-        color: #fff;
+        fill: #ddd;
       }
     }
   }

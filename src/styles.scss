@@ -8,6 +8,7 @@ h1::selection,h2::selection,h3::selection,h4::selection,h5::selection,h6::select
 
 @font-face {
     font-family: 'logoFont';
+    font-display: swap;
     src:url(/assets/fonts/Bungee/Bungee-Regular.woff2) format('woff2'),
         url(/assets/fonts/Bungee/Bungee-Regular.woff) format('woff'),
         url(/assets/fonts/Bungee/Bungee-Regular.ttf) format('truetype');
@@ -15,6 +16,7 @@ h1::selection,h2::selection,h3::selection,h4::selection,h5::selection,h6::select
 
 @font-face {
     font-family: 'comfortaa';
+    font-display: swap;
     src:url(/assets/fonts/Comfortaa/Comfortaa.woff2) format('woff2'),
         url(/assets/fonts/Comfortaa/Comfortaa.woff) format('woff'),
         url(/assets/fonts/Comfortaa/Comfortaa.ttf) format('truetype');

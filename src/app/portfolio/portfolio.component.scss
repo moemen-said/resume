@@ -1,0 +1,15 @@
+.mainRow {
+  justify-content: center;
+  .contentDiv {
+    max-width: unset;
+  }
+}
+
+@media (max-width: 1200px) {
+   .mainRow {
+    justify-content: unset;
+    .contentDiv {
+      max-width: 700px !important;
+    }
+  }
+}

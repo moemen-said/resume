@@ -1,7 +1,7 @@
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { appAnimations } from './app-animation';
+import { appAnimations } from './app.animation';
 
 @Component({
   selector: 'app-root',

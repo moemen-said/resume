@@ -1,7 +1,7 @@
 @import "/src/assets/styles/mixins.scss";
 
 .containerDiv {
-    background-image: linear-gradient(
+  background-image: linear-gradient(
     to right bottom,
     #0c2b36,
     #015665,
@@ -9,288 +9,282 @@
     #00b7b8,
     #12ebd8
   );
-    background-size: 200%;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: backgroundAnimation 1s ease-in-out 5.4s forwards;
+  background-size: 200%;
+  background-position: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: backgroundAnimation 1s ease-in-out 5.4s forwards;
 
-    svg {
-        max-width: 500px;
-    }
+  svg {
+    max-width: 500px;
+    margin-top: 25px;
+  }
 
-    p{
-        color: #080808;
-        font-family: Bungee;
-        font-size: 40px;
-        text-align: center;
-        margin: 20px auto;
-        animation: loadingFading 3s ease-in-out 6.5S infinite;
-        opacity: 0;
-    }
+  p {
+    color: #ffffff;
+    font-family: Bungee;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px auto;
+    animation: loadingFading 3s ease-in-out 6.5s infinite;
+    opacity: 0;
+  }
 }
 
-@media (max-width:768px) {
-    svg {
-        width: 300px;
-    }
-
+@media (max-width: 768px) {
+  svg {
+    width: 300px;
+  }
 }
-
 
 @keyframes loadingFading {
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
 
 /*#region SVG Style and Animation*/
 .top {
-    opacity: 0;
-    animation: fadeTop 5.1s ease-out .5s forwards;
+  opacity: 0;
+  animation: fadeTop 5.1s ease-out 0.5s forwards;
 }
 
 .center {
-    opacity: 0;
-    transform-origin: center;
-    transform: rotateY(90deg);
-    animation: fadeCenter .5s linear forwards;
+  opacity: 0;
+  transform-origin: center;
+  transform: rotateY(90deg);
+  animation: fadeCenter 0.5s linear forwards;
 }
 
 .down {
-    opacity: 0;
-    animation: fadeBottom 5.1s ease-out .5s forwards;
+  opacity: 0;
+  animation: fadeBottom 5.1s ease-out 0.5s forwards;
 }
 
 .n1 {
-    stroke-dasharray: 834 836;
-    stroke-dashoffset: 835;
+  stroke-dasharray: 834 836;
+  stroke-dashoffset: 835;
 
-    &_1 {
-        animation: mDraw 5s ease-out 1.5s forwards;
-    }
+  &_1 {
+    animation: mDraw 5s ease-out 1.5s forwards;
+  }
 
-    &_2 {
-        animation: drawWithFadeOut 5s ease-out 1.55s forwards;
-    }
+  &_2 {
+    animation: drawWithFadeOut 5s ease-out 1.55s forwards;
+  }
 
-    &_3 {
-        animation: drawWithFadeOut 5s ease-out 1.6s forwards;
-    }
+  &_3 {
+    animation: drawWithFadeOut 5s ease-out 1.6s forwards;
+  }
 
-    &_4 {
-        animation: drawWithFadeOut 5s ease-out 1.65s forwards;
-    }
+  &_4 {
+    animation: drawWithFadeOut 5s ease-out 1.65s forwards;
+  }
 
-    &_5 {
-        animation: drawWithFadeOut 5s ease-out 1.7s forwards;
-    }
+  &_5 {
+    animation: drawWithFadeOut 5s ease-out 1.7s forwards;
+  }
 
-    &_6 {
-        animation: drawWithFadeOut 5s ease-out 1.75s forwards;
-    }
+  &_6 {
+    animation: drawWithFadeOut 5s ease-out 1.75s forwards;
+  }
 }
-
 
 .n2 {
-    stroke-dasharray: 834 836;
-    stroke-dashoffset: 835;
+  stroke-dasharray: 834 836;
+  stroke-dashoffset: 835;
 
-    &_1 {
-        animation: sDraw 5s ease-out 1.7s forwards;
-    }
+  &_1 {
+    animation: sDraw 5s ease-out 1.7s forwards;
+  }
 
-    &_2 {
-        animation: drawWithFadeOut 5s ease-out 1.75s forwards;
-    }
+  &_2 {
+    animation: drawWithFadeOut 5s ease-out 1.75s forwards;
+  }
 
-    &_3 {
-        animation: drawWithFadeOut 5s ease-out 1.8s forwards;
-    }
+  &_3 {
+    animation: drawWithFadeOut 5s ease-out 1.8s forwards;
+  }
 
-    &_4 {
-        animation: drawWithFadeOut 5s ease-out 1.85s forwards;
-    }
+  &_4 {
+    animation: drawWithFadeOut 5s ease-out 1.85s forwards;
+  }
 }
 
-
 @keyframes fadeTop {
-    0% {
-        opacity: 0;
-        transform: translateY(40px)
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
 
-    10% {
-        opacity: 1;
-        transform: translateY(0px)
-    }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 
-    95% {
-        opacity: 1;
-        transform: translateY(0px)
-    }
+  95% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(17px)
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(17px);
+  }
 }
 
 @keyframes fadeCenter {
-    0% {
-        transform: rotateX(90deg);
-        opacity: 0;
-    }
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
 
-    100% {
-        transform: rotateX(0deg);
-        opacity: 1
-    }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(-40px)
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
 
-    10% {
-        opacity: 1;
-        transform: translateY(0px)
-    }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 
-    95% {
-        opacity: 1;
-        transform: translateY(0px)
-    }
+  95% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(-17px)
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(-17px);
+  }
 }
 
 @keyframes mDraw {
-    20% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  20% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    50% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    55% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  55% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    70% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    80% {
-        stroke: #080808;
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: scale(2.3)translate(12px, -84px);
-    }
+  80% {
+    stroke: #080808;
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: scale(2.3) translate(12px, -84px);
+  }
 
-    100% {
-        stroke: #333;
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: scale(2.3)translate(12px, -84px);
-
-    }
+  100% {
+    stroke: #333;
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: scale(2.3) translate(12px, -84px);
+  }
 }
 
 @keyframes sDraw {
-    20% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  20% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    50% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    55% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  55% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    66% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  66% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    75% {
-        stroke: #080808;
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: scale(2.2)translate(32px, -173px);
-    }
+  75% {
+    stroke: #080808;
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: scale(2.2) translate(32px, -173px);
+  }
 
-    100% {
-        stroke: #333;
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: scale(2.2)translate(32px, -173px);
-
-    }
+  100% {
+    stroke: #333;
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: scale(2.2) translate(32px, -173px);
+  }
 }
 
 @keyframes drawWithFadeOut {
-    20% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  20% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    50% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
-    55% {
-        stroke-dashoffset: 0;
-        opacity: 0;
-        transform: translateX(10px);
-    }
+  55% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+    transform: translateX(10px);
+  }
 
-    100% {
-        stroke-dashoffset: 0;
-        opacity: 0;
-        transform: translateX(10px);
-    }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+    transform: translateX(10px);
+  }
 }
 
 /*#endregion*/
