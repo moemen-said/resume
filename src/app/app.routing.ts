@@ -6,13 +6,13 @@ const routes: Routes = [
     path: '',
     loadChildren: () =>
       import('./portfolio/portfolio.module').then((m) => m.PortfolioModule),
-    data: { animationState: 'portfolio' },
+    data: { appAnimationState: 'portfolio' },
   },
   {
     path: 'project',
     loadChildren: () =>
       import('./projects/projects.module').then((m) => m.ProjectsModule),
-    data: { animationState: 'signin' },
+    data: { appAnimationState: 'project' },
   }
 ];
 

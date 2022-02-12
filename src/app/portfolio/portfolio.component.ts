@@ -18,7 +18,7 @@ export class PortfolioComponent {
     return (
       outlet &&
       outlet.activatedRouteData &&
-      outlet.activatedRouteData['animationState']
+      outlet.activatedRouteData['portfolioAnimationsState']
     );
   }
 }

@@ -1,5 +1,5 @@
 <div class="row mainRow">
-    <div class="col-12 col-sm-2 col-lg-1" style="z-index: 2;">
+    <div class="col-12 col-sm-2 col-xl-1" style="z-index: 2;">
       <app-nav></app-nav>
     </div>
     <div class="col-12 col-sm-10 col-xl-11 contentDiv">
@@ -9,7 +9,7 @@
           <app-main-data></app-main-data>
         </div>
 
-        <div class="mainContentDiv col-12 col-xl-6" [@portfolioAnimations]="prepareRoute(outlet)" style="z-index: 0;">
+        <div class="mainContentDiv col-12 col-xl-7" [@portfolioAnimations]="prepareRoute(outlet)" style="z-index: 0;">
           <router-outlet #outlet="outlet"></router-outlet>
         </div>
       </div>

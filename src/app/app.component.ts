@@ -24,7 +24,7 @@ export class AppComponent {
   prepareRoute(outlet: RouterOutlet) {
     return outlet &&
         outlet.activatedRouteData &&
-        outlet.activatedRouteData['animationState'];
+        outlet.activatedRouteData['appAnimationState'];
 }
 
   fadeOutIntro() {
