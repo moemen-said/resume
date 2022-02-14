@@ -18,7 +18,7 @@ export class AppComponent {
   constructor(private render: Renderer2) { }
 
   ngOnInit() {
-    this.fadeOutIntro();
+    // this.fadeOutIntro();
   }
 
   prepareRoute(outlet: RouterOutlet) {

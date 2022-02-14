@@ -45,6 +45,7 @@ export const appAnimations = trigger('appAnimations', [
       { optional: true }
     ),
   ]),
+  
   transition('* => portfolio', [
     style({ position: 'relative' }),
     query(

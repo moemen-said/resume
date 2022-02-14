@@ -78,13 +78,15 @@
   .navigationDiv {
     background: $primary-color;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     position: fixed;
     top: 0px;
     left: 0px;
     border-radius: 0;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
 
     &-item {
       padding: 5px 0 0 0;

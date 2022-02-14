@@ -1,15 +1,18 @@
-<div class="row outerDiv">
-  <div class="innerDiv">
-    <header>
-      <div class="logoDiv">
-        <svg>
-          <use xlink:href="/assets/images/icons.svg#logo"></use>
-        </svg>
-      </div>
-      <button routerLink="/projects"><span>Back</span></button>
-    </header>
-    <main>
-      <router-outlet></router-outlet>
-    </main>
+<div class="outerDiv">
+
+  <div class="row">
+    <div class="innerDiv">
+      <header>
+        <div class="logoDiv">
+          <svg>
+            <use xlink:href="/assets/images/icons.svg#logo"></use>
+          </svg>
+        </div>
+        <button routerLink="/projects"><span>Back</span></button>
+      </header>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
   </div>
 </div>

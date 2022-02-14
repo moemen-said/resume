@@ -18,18 +18,49 @@ $shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
   height: 100vh;
 }
 
-@mixin outerDiv {
-  padding: 20px 40px;
+@mixin classicOuterDiv {
+  padding: 20px;
   border-radius: 10px;
   background-color: #fff;
-  margin: 10px 0 10px -40px;
-  height: calc(100% - 20px);
   box-sizing: border-box;
   box-shadow: $shadow;
+}
+
+@mixin outerDiv {
+
+  @include classicOuterDiv;
+  padding: 20px 40px;
+  margin: 10px 0 10px -40px;
+  height: calc(100% - 40px);
 
   @media (max-width: 1200px) {
     margin: 20px auto;
     padding: 20px;
+  }
+}
+
+@mixin innerDiv {
+  height: calc(100% - 40px);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary-color;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $primary-color;
+  }
+
+  @media (max-width: 1200px) {
+    height: auto;
+    overflow-y: unset;
   }
 }
 

@@ -3,14 +3,21 @@
       <app-nav></app-nav>
     </div>
     <div class="col-12 col-sm-10 col-xl-11 contentDiv">
-      <div class="row">
+      <div class="row rowContainer">
 
         <div class="mainDiv col-12 col-xl-5" style="z-index: 1;">
           <app-main-data></app-main-data>
         </div>
 
-        <div class="mainContentDiv col-12 col-xl-7" [@portfolioAnimations]="prepareRoute(outlet)" style="z-index: 0;">
+        <div class="mainContentDiv col-12 col-xl-7 d-none d-sm-block" [@portfolioAnimations]="prepareRoute(outlet)" style="z-index: 0;">
           <router-outlet #outlet="outlet"></router-outlet>
+        </div>
+
+        <div class="mainContentDiv col-12 col-xl-7 d-block d-sm-none" style="z-index: 0;">
+          <app-about id="about"></app-about>
+          <app-resume id="resume"></app-resume>
+          <app-projects id="projects"></app-projects>
+          <app-contact id="contact"></app-contact>
         </div>
       </div>
     </div>

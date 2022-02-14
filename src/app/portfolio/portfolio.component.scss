@@ -1,13 +1,27 @@
 .mainRow {
   .contentDiv {
     max-width: unset;
+    height: 600px;
+
+    .rowContainer{
+      height: 100%;
+    }
+
+    .mainDiv,.mainContentDiv{
+      height: 100%;
+    }
   }
 }
 
 @media (max-width: 1200px) {
-   .mainRow {
-    .contentDiv {
-      max-width: 700px !important;
+  .mainRow {
+   .contentDiv {
+    height: auto;
+    max-width: 700px !important;
+
+    .rowContainer{
+      height: auto;
     }
-  }
+   }
+ }
 }

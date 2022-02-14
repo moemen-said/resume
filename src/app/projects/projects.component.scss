@@ -1,10 +1,12 @@
 @import "/src/assets//styles/mixins.scss";
+
 .outerDiv {
-  @include outerDiv;
+  @include classicOuterDiv;
+  margin: 0px auto;
 
   .innerDiv {
-    background-color: #fff;
-    border-radius: 10px;
+    @include innerDiv;
+    height: calc(100vh - 150px);
 
     header {
       position: relative;
@@ -60,7 +62,7 @@
 
         &:hover {
           span {
-            margin-left: 5px;
+            margin-left: 7px;
           }
           &::before {
             left: 5px;
@@ -72,9 +74,11 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .innerDiv {
-    margin: 0px 10px;
+@media (max-width: 992px) {
+  .outerDiv {
+    .innerDiv {
+      height: auto;
+    }
   }
 }
 
@@ -88,5 +92,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .outerDiv {
+    margin-top:20px ;
   }
 }
