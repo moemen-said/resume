@@ -9,7 +9,7 @@ const routes: Routes = [
     data: { appAnimationState: 'portfolio' },
   },
   {
-    path: 'project',
+    path: 'projects',
     loadChildren: () =>
       import('./projects/projects.module').then((m) => m.ProjectsModule),
     data: { appAnimationState: 'project' },

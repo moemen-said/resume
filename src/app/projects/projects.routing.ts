@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Directory1Component } from './directory1/directory1.component';
+import { DirectoryComponent } from './directory/directory.component';
 import { ProjectViewerComponent } from './projects.component';
 
 const routes: Routes = [
@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '',
     component: ProjectViewerComponent,
     children: [
-      { path: 'firstDirectory', component: Directory1Component }
+      { path: 'directory', component: DirectoryComponent }
     ],
   },
 ];
