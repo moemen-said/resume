@@ -17,6 +17,7 @@ export const portfolioAnimations = trigger('portfolioAnimations', [
           top: 0,
           left: 0,
           width: '100%',
+          minHeight:'500px'
         }),
       ],
       { optional: true }

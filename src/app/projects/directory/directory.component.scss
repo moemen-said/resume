@@ -23,12 +23,30 @@
       margin-bottom: 15px;
     }
     .point {
+      margin: 15px 0;
       h3 {
         color: #444;
         font-weight: 600;
       }
       &-desc {
         margin-left: 10px;
+        p{
+          margin: 0;
+        }
+        &-links {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          p {
+            margin-right: 10px;
+          }
+          a {
+            text-decoration: none;
+            margin-right: 10px;
+            color: $secondary-color;
+            font-weight:600;
+          }
+        }
       }
     }
   }
@@ -64,7 +82,8 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 10px 0 20px 0;
-        img {
+        img,
+        video {
           padding: 10px;
           width: 50%;
           border-radius: 20px;
@@ -87,7 +106,8 @@
     &-view {
       &_imgs {
         &-imgsDiv {
-          img {
+          img,
+          video {
             width: 100%;
           }
         }
